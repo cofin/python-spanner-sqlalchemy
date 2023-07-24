@@ -525,7 +525,7 @@ class SpannerDialect(DefaultDialect):
     max_identifier_length = 256
     insertmanyvalues_max_parameters = 950
     _legacy_binary_type_literal_encoding = "utf-8"
-    
+
     execute_sequence_format = list
 
     supports_alter = True
@@ -537,7 +537,6 @@ class SpannerDialect(DefaultDialect):
     supports_native_boolean = True
     supports_native_decimal = True
     supports_statement_cache = True
-    
 
     ddl_compiler = SpannerDDLCompiler
     preparer = SpannerIdentifierPreparer

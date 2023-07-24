@@ -2398,7 +2398,8 @@ class DialectMaxParametersTest(fixtures.TestBase):
     """
     Check that Spanner dialect's max parameter setting is honored.
     """
-    def test_insertmany_max_parameters(self):
+
+    def test_insertmanyvalues_max_parameters(self):
         engine = create_engine(get_db_url())
         with engine.connect() as connection:
             assert connection.dialect.insertmanyvalues_max_parameters == 950
